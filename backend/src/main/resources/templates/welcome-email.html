@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Multi-User Blogging Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .login-button {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .login-button:hover {
+            background-color: #219a52;
+        }
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+            margin-top: 30px;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 20px;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎉 Multi-User Blogging Platform</div>
+            <h1>Welcome Aboard!</h1>
+        </div>
+        
+        <div class="content">
+            <p>Hello <strong th:text="${username}">User</strong>,</p>
+            
+            <p>🎊 <strong>Congratulations!</strong> Your email has been successfully verified and your account is now active!</p>
+            
+            <p>You're now part of our amazing blogging community where writers, thinkers, and creators share their stories with the world.</p>
+            
+            <div style="text-align: center;">
+                <a th:href="${loginUrl}" class="login-button">
+                    🚀 Start Blogging Now
+                </a>
+            </div>
+            
+            <div class="feature-list">
+                <h3>🌟 What you can do now:</h3>
+                <ul>
+                    <li>✍️ <strong>Write & Publish:</strong> Create engaging blog posts with rich content</li>
+                    <li>🏷️ <strong>Organize Content:</strong> Use categories and tags to organize your posts</li>
+                    <li>💬 <strong>Engage:</strong> Comment on posts and build connections</li>
+                    <li>📊 <strong>Track Performance:</strong> See how many people view your posts</li>
+                    <li>👥 <strong>Community:</strong> Connect with fellow writers and readers</li>
+                </ul>
+            </div>
+            
+            <p><strong>💡 Pro Tips for Getting Started:</strong></p>
+            <ul>
+                <li>Complete your profile to help others discover your content</li>
+                <li>Write your first post - even a simple introduction works great!</li>
+                <li>Explore posts from other writers for inspiration</li>
+                <li>Use relevant tags to help people find your content</li>
+            </ul>
+            
+            <p>We're excited to see what amazing content you'll create! If you have any questions or need help getting started, don't hesitate to reach out.</p>
+            
+            <p>Happy blogging! 📝✨</p>
+        </div>
+        
+        <div class="footer">
+            <p>Need help? Contact us at semanusebuava@gmail.com.com</p>
+            <p>© 2025 Multi-User Blogging Platform. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿{
+  "info": {
+    "name": "Multi-User Blogging Platform API",
+    "description": "Complete API collection with 65+ endpoints for testing the blogging platform. Import the environment file and start with Authentication > Login to auto-save your JWT token.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": []
+}

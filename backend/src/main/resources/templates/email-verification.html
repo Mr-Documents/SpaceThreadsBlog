@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .verify-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .verify-button:hover {
+            background-color: #2980b9;
+        }
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+            margin-top: 30px;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 20px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📝 Multi-User Blogging Platform</div>
+            <h1>Verify Your Email Address</h1>
+        </div>
+        
+        <div class="content">
+            <p>Hello <strong th:text="${username}">User</strong>,</p>
+            
+            <p>Thank you for registering with our Multi-User Blogging Platform! To complete your registration and start sharing your amazing content, please verify your email address.</p>
+            
+            <div style="text-align: center;">
+                <a th:href="${verificationUrl}" class="verify-button">
+                    ✅ Verify Email Address
+                </a>
+            </div>
+            
+            <p>Or copy and paste this link into your browser:</p>
+            <p style="word-break: break-all; background-color: #f8f9fa; padding: 10px; border-radius: 5px;">
+                <a th:href="${verificationUrl}" th:text="${verificationUrl}">Verification Link</a>
+            </p>
+            
+            <div class="warning">
+                <strong>⚠️ Important:</strong> This verification link will expire in 24 hours. If you don't verify your email within this time, you'll need to register again.
+            </div>
+            
+            <p>Once verified, you'll be able to:</p>
+            <ul>
+                <li>✍️ Create and publish blog posts</li>
+                <li>💬 Comment on other posts</li>
+                <li>🏷️ Organize content with categories and tags</li>
+                <li>👥 Connect with other writers</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>If you didn't create an account with us, please ignore this email.</p>
+            <p>© 2025 Multi-User Blogging Platform. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
